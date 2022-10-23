@@ -1,0 +1,73 @@
+body{
+    background-color: #02182B;
+}
+#time{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 6em;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #59C9A5 4%, #FF773D 95%);
+    -webkit-text-fill-color: transparent ;
+    -webkit-background-clip: text;
+
+}
+.digitalClock{
+    display: none;
+}
+/* code to animate display of digital clock */
+
+.animated {
+	-webkit-animation-duration: 3.8s;
+	animation-duration: 3.8s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fadeInRight { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateX(20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateX(0); 
+    } 
+} 
+@keyframes fadeInRight { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateX(0); 
+    } 
+} 
+.fadeInRight { 
+    -webkit-animation-name: fadeInRight; 
+    animation-name: fadeInRight; 
+}
+
+/* end of animated display */
+
+button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    padding:18px 10px;
+    width:180px;
+    margin: 10px;
+    outline: none;
+    border: solid 1px white;
+    background-color:#941C2F ;
+    color: white;
+}
+button:hover {
+    background-color: white;
+    color: #02182B;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
