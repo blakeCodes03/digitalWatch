@@ -17,7 +17,7 @@ function checkTime(i) {
     document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
     t = setTimeout(function() {
       startTime()
-    }, 500);
+    }, 1000);
   }
   startTime();
 
@@ -25,5 +25,14 @@ function checkTime(i) {
 var showTime = document.getElementById('showTime')
 showTime.onclick = function(){
     document.getElementById('time').classList.add('animated', 'fadeInRight');
-    document.getElementById('time').classList.toggle('digitalClock');
+    document.getElementById('time').classList.remove('digitalClock');
+    const myTimeout = setTimeout(function() { /*to make time fade out right after 5 secs*/
+      document.getElementById('time').classList.add('fade-out-right'); 
+      myStopFunction();
+    }, 5000);
+    function myStopFunction() {
+      clearTimeout(myTimeout);
+    }
+   
+    
 }
