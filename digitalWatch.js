@@ -23,16 +23,14 @@ function checkTime(i) {
 
 //   button clicking to activate watch
 var showTime = document.getElementById('showTime')
-showTime.onclick = function(){
+showTime.addEventListener("click", function(){
     document.getElementById('time').classList.add('animated', 'fadeInRight');
     document.getElementById('time').classList.remove('digitalClock');
-    const myTimeout = setTimeout(function() { /*to make time fade out right after 5 secs*/
-      document.getElementById('time').classList.add('fade-out-right'); 
-      myStopFunction();
-    }, 5000);
-    function myStopFunction() {
-      clearTimeout(myTimeout);
-    }
-   
+    setTimeout(function() { /*to make time fade out right after 5 secs*/
+      document.getElementById('time').classList.add('fade-out-right');      
+    }, 7000);
+    document.getElementById('time').classList.remove('fade-out-right');  /*to remove the class so it can fade again on button click*/   
     
-}
+})
+ 
+    
